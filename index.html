@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url("https://i.pinimg.com/originals/52/24/7f/52247f214662e5f9c23257292647e669.jpg");
+            background-color: #282c34;
+            background-size: cover;
+            color: black;
+        }
+
+        .container {
+            max-width: 1200px;
+            background-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        #vlozitMesto {
+            margin-bottom: 20px;
+        }
+
+        #pridatOblibeneBtn {
+            display: none;
+        }
+
+        #pocasiInfo {
+            padding: 30px;
+            border: 2px solid #ddd;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-top: 30px;
+        }
+
+        #oblibeneSeznam {
+            margin-top: 40px;
+        }
+
+        .btn-primary {
+            background-color: #61dafb;
+            border-color: #61dafb;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-block {
+            border-radius: 8px;
+        }
+
+        h1,
+        h2 {
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mb-4">Weather</h1>
+
+        <div class="form-group row">
+            <label for="vlozitMesto" class="col-sm-2 col-form-label">Search city:</label>
+            <div class="col-sm-10">
+                <input type="text" id="vlozitMesto" class="form-control" placeholder="Search">
+            </div>
+        </div>
+
+        <button onclick="pocasi()" class="btn btn-primary btn-block">Search</button>
+        <button id="pridatOblibeneBtn" onclick="pridatOblibene()" class="btn btn-success btn-block mt-3">Add to favourite</button>
+
+        <div id="pocasiInfo" class="mt-4"></div>
+
+        <div id="oblibeneSeznam">
+            <h2>Favourite cities</h2>
+            <ul id="oblibene" class="list-group"></ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
